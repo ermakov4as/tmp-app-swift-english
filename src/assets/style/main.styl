@@ -1,0 +1,88 @@
+@font-face {
+    font-family "Circe-Bold"
+    src url('~@/assets/style/fonts/Circe-Bold.ttf') format("truetype")
+}
+@font-face {
+    font-family "Circe-Regular"
+    src url('~@/assets/style/fonts/Circe-Regular.ttf') format("truetype")
+}
+
+html
+    height 100%
+
+body
+    font-family "Circe-Regular", Helvetica, Arial, serif
+    color #15152D
+    height 100%
+
+#app
+    height 100%
+
+/* BASE VARIBALES */
+// все переменные. Любой атрибут, повторяющийся более 2-х раз, должен быть тут
+
+$blue = #3B7AF5
+$dark-blue = #0057FF
+$white = #ffffff
+$gray = #9F9F9F
+
+$shadow-btn-primary = rgba(0, 87, 255, .5)
+
+/* BASE VARIBALES */
+
+/* BASE MIXINS */
+// Частоиспользуемые в этом файле и в компонентах миксины
+
+bold()
+    font-family "Circe-Bold", Helvetica, Arial, serif
+
+radius(r=15px)
+    border-radius r
+
+shadow(x = 0px, y = 5px, blur=15px, clr=rgba(0, 0, 0, .1))
+    box-shadow x y blur clr
+
+flex-width(width)
+    -ms-flex 0 0 width;
+    flex 0 0 width;
+
+/* BASE MIXINS */
+
+/* TAGS */
+// Голые теги
+
+h2
+    font-size 34px
+    bold()
+
+/* TAGS */
+
+/*  REWRITE BOOTSTRAP */
+// Поправленные базовые классы бутсрапа
+
+.input-label
+    margin-bottom 0px
+    font-size 16pt
+    color $gray
+
+.form-control
+    padding 25px 15px
+
+.btn.btn-primary
+    radius(50px)
+    shadow(0px, 4px, 8px, $shadow-btn-primary)
+    bold()
+    border none
+    background-color $dark-blue
+    min-width 180px
+
+/*  REWRITE BOOTSTRAP */
+
+/* BASE CLASSES */
+// Используемые в разных компонентах классы
+
+.plashka
+    shadow()
+    background-color $white
+
+/* BASE CLASSES */
